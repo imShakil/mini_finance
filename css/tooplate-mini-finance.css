@@ -189,7 +189,7 @@ strong {
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  color: var(--p-color);
+  color: #1D3557;
   font-size: var(--menu-font-size);
   font-weight: var(--font-weight-normal);
   padding: 15px 25px;
@@ -473,11 +473,12 @@ strong {
 
 #sidebarMenu .nav {
   flex-wrap: inherit;
+  background-color: orange;
 }
 
 #sidebarMenu .nav-link {
   border-radius: var(--border-radius-small);
-  color: var(--p-color);
+  color: white;
   font-size: var(--menu-font-size);
   display: inline-block;
   position: relative;
