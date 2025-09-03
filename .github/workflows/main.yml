@@ -30,7 +30,7 @@ jobs:
             git reset --hard origin/main
 
             echo "🔄 Syncing to /var/www/mini-finance"
-            rsync -av --delete --exclude='.git' ./ /var/www/mini-finance/
+            sudo rsync -av --delete --exclude='.git' ./ /var/www/mini-finance/
 
             echo "♻️ Restarting nginx"
             sudo systemctl restart nginx
