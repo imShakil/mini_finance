@@ -219,8 +219,31 @@ Once you've made your LinkedIn post:
 
 See you in the **LinkedIn network!** 🎉
 
-
-
 Assignment Note
 
 This project demonstrates Git operations like clone, pull, push, and creating a Pull Request—a hands-on Mini-Finance tool.
+
+## Day 2 Subtask on Footer
+
+- Javascript code snippet
+    See code snippet in [mh.js](./js/mh.js) file
+- Added html span:
+
+    ```html
+    <small><strong>Mini Finance v1.0 </strong> • Deployed on <span id="deploymentDate"></span> - By Mobarak Hosen</small>
+    ```
+
+- Linked js:
+
+    ```html
+    <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/apexcharts.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/mh.js"></script>
+    ```
+
+- Watch Live [demo](http://mini-finance.mhosen.com)
+
+    ![day-2](./images/screenshot-on-dynamic-date.png)
