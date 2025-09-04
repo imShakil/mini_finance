@@ -1,3 +1,21 @@
+// Fetch latest commit hash from GitHub API
+async function getLatestCommitHash() {
+    try {
+        const response = await fetch('https://api.github.com/repos/imshakil/mini_finance/commits/main');
+        const data = await response.json();
+        return data.sha.substring(0, 7); // Get first 7 characters
+    } catch (error) {
+        console.log('Could not fetch commit hash:', error);
+        return 'Unknown'; // Fallback hash
+    }
+}
+
+async function updateCommitHash() {
+    const commitHash = await getLatestCommitHash();
+    document.getElementById('commitHash').textContent = `#${commitHash}`;
+}
+updateCommitHash();
+
 // Dynamic deployment date
 const now = new Date();
 const day = now.getDate();
