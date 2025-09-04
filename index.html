@@ -173,8 +173,8 @@ Bootstrap 5 Dashboard Admin Template
                                     <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="">
 
                                     <div class="d-flex flex-column">
-                                        <small>Thomas</small>
-                                        <a href="#">thomas@site.com</a>
+                                        <small>Mobarak Hosen</small>
+                                        <a href="#">mhosen@site.com</a>
                                     </div>
                                 </div>
                             </li>
@@ -433,23 +433,24 @@ Bootstrap 5 Dashboard Admin Template
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>Name:</strong>
 
-                                    <span>Thomas Edison</span>
+                                    <span>Mobarak Hosen</span>
                                 </p>
 
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>Email:</strong>
                                     
                                     <a href="#">
-                                        thomas@site.com
+                                        mhosen@site.com
                                     </a>
                                 </p>
 
-                                <p class="d-flex flex-wrap mb-0">
+                                <p class="d-flex flex-wrap mb-0 align-items-center">
                                     <strong>Phone:</strong>
 
-                                    <a href="#">
-                                        (60) 12 345 6789
-                                    </a>
+                                    <span id="phoneNumber" class="ms-2">*******</span>
+                                    <button id="togglePhone" class="btn btn-sm ms-2 p-1" style="border: none; background: none;">
+                                        <i class="bi-eye" id="eyeIcon"></i>
+                                    </button>
                                 </p>
                             </div>
 
@@ -680,6 +681,21 @@ Bootstrap 5 Dashboard Admin Template
 
             var chart = new ApexCharts(document.querySelector("#chart"), options);
             chart.render();
+        </script>
+
+        <script>
+            document.getElementById('togglePhone').addEventListener('click', function() {
+                const phoneNumber = document.getElementById('phoneNumber');
+                const eyeIcon = document.getElementById('eyeIcon');
+                
+                if (phoneNumber.textContent === '*******') {
+                    phoneNumber.textContent = '+1 (555) 123-4567';
+                    eyeIcon.className = 'bi-eye-slash';
+                } else {
+                    phoneNumber.textContent = '*******';
+                    eyeIcon.className = 'bi-eye';
+                }
+            });
         </script>
 
     </body>
